@@ -2,8 +2,8 @@
   "files": [],
   "compilerOptions": {
     "isolatedModules": true,
+    "useDefineForClassFields": true
   },
-  "useDefineForClassFields": true,
   "references": [
     {
       "path": "./tsconfig.config.json"
