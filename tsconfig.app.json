@@ -1,20 +1,33 @@
 {
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts", "src/**/*.json"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.json"
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
-    "lib": ["es2020", "dom"],
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+
+    "lib": ["ESNext", "DOM"],
     "types": [],
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
+
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    "useDefineForClassFields": true,
+    "isolatedModules": true
   }
 }

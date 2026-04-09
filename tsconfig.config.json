@@ -1,9 +1,17 @@
 {
-  "include": ["vite.config.*", "cypress.config.*", "playwright.config.*"],
+  "include": [
+    "vite.config.*",
+    "cypress.config.*",
+    "playwright.config.*"
+  ],
   "compilerOptions": {
     "composite": true,
-    "types": ["node"],
+
+    "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+
+    "types": ["node"],
+    "isolatedModules": true
   }
 }
