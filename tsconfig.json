@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "isolatedModules": true,
+  },
+  "useDefineForClassFields": true,
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}

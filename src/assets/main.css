@@ -1,0 +1,82 @@
+/* ============================================================
+   CUBORITHM — Design System
+   GreenGreyCold: #1F6F5F, #2FA084, #6FCF97
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    /* ── Background layers (Light shell with Dark Green Cards) ───────────────── */
+    --bg-main:    #FFFFFF; /* White shell */
+    --bg-sidebar: #132f29; /* Previous Darker Sidebar */
+    --bg-card:    #18574A; /* A slightly darker shade of green for the cards */
+    
+    /* ── Borders ──────────────────────────────────────────── */
+    --border:     rgba(255, 255, 255, 0.1);
+    --border-hl:  rgba(47, 160, 132, 0.4); /* Teal border hover */
+
+    /* ── Text ─────────────────────────────────────────────── */
+    --text-primary:   #EEEEEE; /* Light Text for dark green cards */
+    --text-secondary: rgba(238, 238, 238, 0.75);
+    --text-muted:     rgba(238, 238, 238, 0.45);
+
+    /* ── Accent ───────────────────────────────────────────── */
+    --accent-dark:    #1F6F5F; /* Primary Dark */
+    --accent-teal:    #2FA084; /* Secondary Muted Teal */
+    --accent-mint:    #6FCF97; /* Accent Soft Mint Green */
+    --accent-grad:    linear-gradient(135deg, var(--accent-teal), var(--accent-mint));
+    --accent-glow:    rgba(111, 207, 151, 0.15);
+
+    /* ── Semantic ─────────────────────────────────────────── */
+    --success:        rgba(111, 207, 151, 0.15);
+    --success-border: rgba(111, 207, 151, 0.3);
+    --success-text:   #6FCF97;
+    --danger:         rgba(239, 68, 68, 0.15);
+    --danger-border:  rgba(239, 68, 68, 0.3);
+    --danger-text:    #f87171;
+
+    /* ── Radii ────────────────────────────────────────────── */
+    --r-sm:  8px;
+    --r-md:  12px;
+    --r-lg:  16px;
+    --r-xl:  24px;
+
+    /* ── Font ─────────────────────────────────────────────── */
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+html, body, #app {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: var(--font);
+    color: var(--text-primary);
+    background: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbars ───────────────────────────────────────────── */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+*::-webkit-scrollbar       { width: 4px; height: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
+
+:focus-visible {
+    outline: 2px solid var(--accent-mint);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Base card / glass layout logic */
+.glass-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px 0 rgba(31, 111, 95, 0.15); /* soft green shadow */
+    border-radius: var(--r-xl);
+}
