@@ -1,8 +1,7 @@
 {
   "files": [],
   "compilerOptions": {
-    "isolatedModules": true,
-    "useDefineForClassFields": true
+    "isolatedModules": true
   },
   "references": [
     {
